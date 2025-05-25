@@ -1,0 +1,13 @@
+namespace: my-app
+
+mongodb:
+  image: mongo:latest
+  port: 27017
+  storage: 1Gi
+
+frontend:
+  image: kdprasad028/fssfrontend:v1
+  port: 3130
+  sessionSecret: "1234"
+  emailUser: chagantyteja2502@gmail.com
+  emailPass: yxoq bjuk rdnt alzp
