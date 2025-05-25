@@ -37,3 +37,7 @@ helm install my-app ./my-app
 
 helm uninstall my-app
 >>>>>>> 04bf784 (Clahan fss repo)
+
+
+kubectl apply -f storageclass.yaml
+kubectl apply -f pvc.yaml
