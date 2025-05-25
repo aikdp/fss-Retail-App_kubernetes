@@ -23,8 +23,8 @@ spec:
               value: "{{ .Values.env.mongodbUri }}"
             - name: SESSION_SECRET
               value: "{{ .Values.env.sessionSecret }}"
-            - name: PORT
-              value: "{{ .Values.env.port | quote }}"
+            # - name: PORT
+            #   value: "{{ .Values.env.port | quote }}"
             - name: EMAIL_USER
               valueFrom:
                 secretKeyRef:
