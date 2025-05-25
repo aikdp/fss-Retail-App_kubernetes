@@ -9,4 +9,4 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: gp2  # For AWS EBS; use your available StorageClass
+  storageClassName: mongo-sc
