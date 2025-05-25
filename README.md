@@ -41,3 +41,5 @@ helm uninstall my-app
 
 kubectl apply -f storageclass.yaml
 kubectl apply -f pvc.yaml
+
+helm install frontend ./frontend-chart --namespace my-app --create-namespace

@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: kdprasad028/fssfrontend
+  tag: v1
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 3130
+
+env:
+  mongodbUri: mongodb://mongodb:27017/myDatabase
+  sessionSecret: "1234"
+  port: 3130
+
+secret:
+  emailUser: chagantyteja2502@gmail.com
+  emailPass: yxoq bjuk rdnt alzp
