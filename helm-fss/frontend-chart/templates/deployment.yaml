@@ -17,7 +17,7 @@ spec:
         - name: frontend
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
-            - containerPort: {{ .Values.env.port }}
+            - containerPort: {{ .Values.env.port | int }}
           env:
             - name: MONGODB_URI
               value: "{{ .Values.env.mongodbUri }}"
