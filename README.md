@@ -19,8 +19,6 @@ COPY ./mongo-init.js /docker-entrypoint-initdb.d/
 
 # Expose MongoDB port
 EXPOSE 27017
-<<<<<<< HEAD
-=======
 
 
 ---
@@ -36,7 +34,6 @@ kubectl apply -f frontend-service.yaml
 helm install my-app ./my-app
 
 helm uninstall my-app
->>>>>>> 04bf784 (Clahan fss repo)
 
 
 kubectl apply -f storageclass.yaml
