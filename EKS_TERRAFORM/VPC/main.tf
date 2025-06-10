@@ -139,13 +139,14 @@ resource "aws_route_table_association" "private" {
   route_table_id = aws_route_table.private[count.index].id
 }
 
-# Route for Private Subnets
-resource "aws_route" "private" {
-  count = length(var.private_subnet_cidrs)
-  route_table_id = aws_route_table.private[count.index].id
-  destination_cidr_block = "0.0.0.0/0"
-  nat_gateway_id = aws_nat_gateway.gw[count.index].id
-}
+#checking without NAT, means Removing NAT ACcess route to Private subnets and checking with VPC endpoints 10-06-2025
+# # Route for Private Subnets
+# resource "aws_route" "private" {
+#   count = length(var.private_subnet_cidrs)
+#   route_table_id = aws_route_table.private[count.index].id
+#   destination_cidr_block = "0.0.0.0/0"
+#   nat_gateway_id = aws_nat_gateway.gw[count.index].id
+# }
 
 # Route Table for Database Subnets
 resource "aws_route_table" "database" {
